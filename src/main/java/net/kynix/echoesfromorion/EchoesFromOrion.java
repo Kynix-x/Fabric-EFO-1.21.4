@@ -3,6 +3,7 @@ package net.kynix.echoesfromorion;
 import net.fabricmc.api.ModInitializer;
 
 import net.kynix.echoesfromorion.item.ModItems;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,6 +14,10 @@ public class EchoesFromOrion implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		ModItems.registerModItems();
+		//ModItems.load();
+	}
+
+	public static Identifier id(String path) {
+		return Identifier.of(MOD_ID, path);
 	}
 }
