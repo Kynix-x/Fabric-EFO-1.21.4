@@ -12,5 +12,6 @@ public class EchoesFromOrion implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
+
 	}
 }
