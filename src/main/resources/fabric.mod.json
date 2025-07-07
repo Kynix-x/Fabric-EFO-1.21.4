@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "echoesfromorion",
+	"version": "${version}",
+	"name": "Echoes From Orion",
+	"description": "Echoes From Orion Mod by Kynix!",
+	"authors": [
+		"Kynix!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Kynix-x/Fabric-EFO-1.21.4"
+	},
+	"license": "MIT",
+	"icon": "assets/echoesfromorion/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.kynix.echoesfromorion.EchoesFromOrion"
+		],
+		"fabric-datagen": [
+			"net.kynix.echoesfromorion.EchoesFromOrionDataGenerator"
+		],
+		"client": [
+			"net.kynix.echoesfromorion.EchoesFromOrionClient"
+		]
+	},
+	"mixins": [
+		"echoesfromorion.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
