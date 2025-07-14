@@ -2,6 +2,7 @@ package net.kynix.echoesfromorion;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.kynix.echoesfromorion.entity.JumpscareCreatureEntity;
 import net.kynix.echoesfromorion.item.ModItems;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;

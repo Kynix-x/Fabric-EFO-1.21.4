@@ -19,11 +19,17 @@ public class WindowShake {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client == null) return;
 
-        // Tam ekrandaysa çık
-        //if (client.isFullscreen()) client.toggleFullscreen();
-
         Window window = client.getWindow();
         windowHandle = window.getHandle();
+
+        if (window.isFullscreen()) {
+            window.toggleFullscreen();
+            // Metodu yeniden çağırmadan önce kısa bir gecikme eklemek gerekebilir
+            // çünkü toggleFullscreen() işlemi anlık olmayabilir.
+            // Ancak, Fabric'in tick sistemi içinde bu genellikle sorun yaratmaz.
+            WindowShake.start(30, 12); // Kendini tekrar çağır
+            return; // İlk çağrıyı sonlandır
+        }
 
         // Mevcut konumu kaydet
         try (MemoryStack stack = MemoryStack.stackPush()) {
